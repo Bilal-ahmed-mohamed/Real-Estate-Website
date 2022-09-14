@@ -7,6 +7,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import ContactUs from "./pages/ContactUs";
 import Footer from "./components/Footer";
+import Hero from "./pages/Hero";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/Signup" element={<Signup/>}/>
         <Route path="/ContactUs" element={<ContactUs/>}/>
        </Routes>
+       
        <Footer/>
        </BrowserRouter>
 

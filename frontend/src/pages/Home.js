@@ -1,10 +1,16 @@
 import React from 'react'
+import Card from '../components/Card'
+import Hero from './Hero'
 
 
 const  Home = ()  => {
 
   return (
-    <div>Home page </div>
+    <div> 
+        <Hero/>
+        <Card/>
+
+        </div>
   )
 }
 
