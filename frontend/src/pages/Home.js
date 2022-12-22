@@ -8,10 +8,15 @@ const  Home = ()  => {
   return (
     <div> 
         <Hero/>
-        <Card/>
+        <Card />
 
         </div>
   )
+
+
+
+
+  
 }
 
 export default Home

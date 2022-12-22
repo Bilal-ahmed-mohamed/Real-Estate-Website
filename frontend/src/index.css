@@ -12,22 +12,36 @@ code {
     monospace;
 }
  */
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+input .error {
+  border: 1px solid red;
+}
+.App{
+  width: 100%;
+  height: auto;
+}
+body{
+  border: 1px solid red;
+  height: auto;
+  background: rgb(238, 238, 238);
 }
 :root{
   --blue:#242F9B;
   --lightblue:#B2C8DF;
   --lightgrey:#EFEFEF;
 }
-input{
-  width: 200px;
-  height: 35px;
+/* input{
+  width: 250px;
+  height: 45px;
   border-radius: 5px;
   outline: none;
-}
+  border:  2px solid var(--lightblue);
+} */
 button{
   background-color: var(--blue);
   width: 80px;
@@ -40,60 +54,67 @@ button a{
   text-decoration: none;
 
 }
-
+.navbar-section{
+  width: 100%;
+  height: auto;
+  background: white;
+  position: relative;
+  top: -18px;
+}
 .navbar{
   max-width: 1100px;
   height: 50px;
-  border: 1px solid red;
+  /* width: 81%; */
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
+  border: 2PX solid  seagreen;
 }
 .navbar-logo{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   width: 15%;
+  margin-left: -18px;
 }
 .navbar-links{
-  width: 65%;
+  width: 75%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-
 }
 .navbar-links span{
- width: 40%;
+ width: 55%;
  display: flex;
  justify-content: space-around;
- position: relative;
-  
+ align-items: center;
+ position: relative;  
 }
 .navbar-links span a{
   text-decoration: none;
   color: grey;
+}
 
- 
-}
-.navbar-dropdown{
-  height: 120px;
-  width: 150px;
-  border: 1px solid blue;
-  position: absolute;
-  top: 32px;
-}
-.navbar-dropdown a{
-  display: flex;
-  justify-content: space-around;
-}
 .navbar-buttons{
-  width: 50%;
+  width: 55%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-right: -25px;
+}
+.navbar-buttons .user-logged{
+  width: 100%;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+}
+
+.navbar-buttons .user-not-logged{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 .navbar-burger{
   width: 40px;
@@ -114,6 +135,8 @@ button a{
   height: 100px;
   display: flex;
   border: 2px solid var(--lightgrey);
+  margin-top: 120px;
+
 }
 .footer-half1{
   width: 50%;
@@ -186,31 +209,540 @@ button a{
 .card{
   max-width: 1100px;
   height: auto;
-  border: 1px solid olivedrab;
+  background: white;
   margin: auto;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  
 }
+
 .card-section{
   width: 250px;
   height: 300px;
-  border: 1px solid indigo;
+  border: 1px solid rgb(5, 165, 240);
+  border-radius: 5px;
+  margin: 10px;
 }
 .card-img{
   width: 100%;
   height: 130px;
-  border: 1px solid rgb(230, 153, 12);
+  
+}
+.card-img img{
+    width: 100%;
+    height: 130px;
 }
 .card-details{
   width: 100%;
   height: 150px;
-  background: yellowgreen;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
 }
+.card-details-price{
+  color: red;
+}
+/* styles for Add property page  */
+.form-page{
+  width: 100%;
+  height: auto;
+  /* display: flex;
+  justify-content: center; */
+}
+
+.form-card{
+  /* border: 2px solid var(--blue); */
+  background: white;
+  border-radius: 5px;
+  max-width: 1100px;
+  height: 450px;
+  margin: auto;
+  /* margin-top: 70px;
+  margin-bottom: 30px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.form-div1{
+  width: 75%;
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+
+}
+.form-div1-one{
+  width: 50%;
+  height: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.form-div1-two{
+  width: 50%;
+  height: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.form-div1 input{
+  width: 350px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+
+.form-div2 input{
+  width: 350px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+.form-div3 input{
+  width: 350px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+.form-div4 input{
+  width: 350px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+.form-div5 input{
+  width: 350px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+.form-div2{
+  width: 75%;
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+}
+.form-div2-one{
+  width: 50%;
+  height: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.form-div2-two{
+  width: 50%;
+  height: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.form-div3{
+  width: 75%;
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+}
+.form-div3-one{
+  width: 50%;
+  height: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.form-div3-one select{
+  width: 350px;
+  height: 30px;
+  border-radius: 10px;
+}
+.form-div3-two{
+  width: 50%;
+  height: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.form-div3-two select{
+  width: 350px;
+  height: 30px;
+  border-radius: 10px;
+}
+.form-div1-two select{
+  width: 350px;
+  height: 30px;
+  border-radius: 10px;
+}
+.form-div4{
+  width: 75%;
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+}
+.form-div4-one{
+  width: 50%;
+  height: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.form-div4-two{
+  width: 50%;
+  height: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.form-div5{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.form-div5 span{
+  width: 60%;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.form-div5 span input{
+  width: 250px;
+  text-align: center;
+}
+.form-div6{
+  width: 75%;
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+}
+.form-div6-one{
+  width: 50%;
+  height: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.form-div6-two{
+  width: 50%;
+  height: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.form-div6 input{
+  width: 350px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+
+.form-div6 input{
+  width: 350px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+.form-button{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.form-button button{
+  width: 350px;
+  height: 40px;
+}
+/* indivualPage styling  */
+
+.indivualPage{
+  width: 100%;
+  height: 1000px;
+
+}
+.indivualpage-images-display-section{
+  width: 100%;
+  height: 300px;
+  background: navy;
+}
+.indivualpage-about-area{
+  width: 100%;
+  height: 700px;
+  display: flex;
+}
+.indivualpage-abt-property{
+  width: 65%;
+  height: auto;
+}
+.details-of-the-property{
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.indivualpage-agent-contact-area{
+  width: 35%;
+  height: auto;
+  border: 1px solid var(--lightblue);
+}
+.property-banner{
+  width: 100%;
+  height: 100px;
+  border: 1px solid var(--lightgrey);
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-to-contact-agent{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.full-name-details{
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.full-name-details input , label{
+  width: 75%;
+}
+.phone-number-details{
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.phone-number-details input , label{
+  width: 75%;
+}
+.email-details{
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+ .email-details input , label{
+  width: 75%;
+}
+.message-details{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.message-details input , textarea{
+  width: 75%;
+}
+.message-details textarea{
+  width: 350px;
+  height: 50px;
+}
+.contact-btn{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+.contact-btn button{
+  width: 100px;
+  width: 75%;
+}
+/* styles for signup page */
+.signup{
+ margin:auto ;
+  width: 82%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signup-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 50%;
+  height: 500px;
+  /* border: 2px solid green; */
+  background: white;
+  border-radius: 10px;
+  /* margin: auto; */
+  
+}
+.error-div{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.error-div .error{
+  color: red;
+  font-size: 20px;
+}
+.signup-form-name-input{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100px;
+  width: 95%;
+}
+.signup-form-name-input input{
+  width: 100%;
+  height: 40px;
+  border: 2px solid var(--lightblue);
+  border-radius: 10px;
+}
+
+.signup-form-email-input{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100px;
+  width: 95%;
+}
+.signup-form-email-input input{
+  width: 100%;
+  height: 40px;
+  border: 2px solid var(--lightblue);
+  border-radius: 10px;
+}
+.signup-form-password-input{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100px;
+  width: 95%;
+}
+.signup-form-password-input input{ 
+  width: 100%;
+  height: 40px;
+  border: 2px solid var(--lightblue);
+  border-radius: 10px;}
+.signup-form-name-input,
+.signup-form-email-input,
+.signup-form-password-input,
+.signup-form-signup-button{
+   margin: auto;
+   
+}
+.signup-form-signup-button{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;  
+}
+.signup-form-signup-button button{
+  cursor: pointer;
+}
+.signup-form-signup-button p{
+  font-size: 20px;
+}
+.signup-form-signup-button p a{
+  text-decoration: none;
+}
+.login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:auto ;
+  width: 82%;
+  height: 400px;
+
+}
+.login-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 50%;
+  height: 400px;
+  background: white;
+  border-radius: 10px;
+  /* margin: auto; */
+}
+.login-form-input-email{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100px;
+  width: 95%;
+
+}
+.login-form-input-email input{
+  width: 100%;
+  height: 40px;
+  border: 2px solid var(--lightblue);
+  border-radius: 10px;
+}
+.login-form-input-password{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100px;
+  width: 95%;
+
+}
+.login-form-input-password input{
+  width: 100%;
+  height: 40px;
+  border: 2px solid var(--lightblue);
+  border-radius: 10px;
+}
+.login-form-input-email,
+.login-form-input-password{
+  margin: auto;
+}
+.login-form-button-login{
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;  
+}
+.login-form-button-login button{
+  cursor: pointer;
+}
+.login-form-button-login p{
+  font-size: 20px;
+}
+.login-form-button-login p a{
+  text-decoration: none;
+}
 @media only screen and (max-width: 600px){
   body{
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
+  }
+  .navbar-section{
+    position: relative;
+    top: 0px;
   }
   .navbar{
     width: 100%;
@@ -308,6 +840,112 @@ button a{
     width: 100%;
   }
   .hero-search-area-price input{
+    width: 100%;
+  }
+  
+  .card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    
+    
+  }
+  .card-section{
+    margin: auto;
+    width: 92%;
+  }
+  .card-img{
+    width: 100%;
+    height: 130px;
+  }
+  .card-img img{
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+  }
+  .form-page{
+    width: 100%;
+  }
+  .form-card{
+    width: 100%;
+    height: auto;
+    
+  }
+  /* styles for addProperty page */
+  .form-page{
+    width: 100%;
+    height: auto;
+  }
+  .form-div1{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .form-div1 span {
+     width: 95%;
+  }
+  .form-div1 span input{
+    width: 95%;
+    border-radius: 10px;
+    outline: none;
+  }
+  .form-div2{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+  }
+  .form-div2 span{
+    width: 95%;
+  }
+  .form-div2 span input{
+    width: 95%;
+    border-radius: 10px;
+    outline: none;
+  }
+  .form-div3{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+  }
+  .form-div3 span{
+    width: 95%;
+  }
+  .form-div3 span input{
+    width: 95%;
+    border-radius: 10px;
+    outline: none;
+  }
+  .form-div4{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+  }
+  .form-div4 span{
+    width: 95%;
+  }
+  .form-div4 span input{
+    width: 95%;
+    border-radius: 10px;
+    outline: none;
+  }
+  /* styles for signup page */
+  .signup{
+    width: 100%;
+  }
+  .signup-form{
+    width: 100%;
+  }
+  .login{
+    width: 100%;
+  }
+  .login-form{
     width: 100%;
   }
   

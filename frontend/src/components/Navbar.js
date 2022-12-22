@@ -1,12 +1,19 @@
 import React, { useState } from 'react'
 import { MdHome } from "react-icons/md";
 import { Link } from "react-router-dom";
-
+import { UseAuthContext } from '../hooks/UseAuthContext';
+import {UseLogout} from '../hooks/UseLogout'
 
 const  Navbar = () =>  {
 const [menuStatus , setMenuStatus] = useState(true);
 const [dropdownStatus , setDropdownStatus] = useState(true);
+const {logout} = UseLogout()
+const {user} = UseAuthContext();
 
+
+const handleClick = () => {
+  logout()
+}
 const toggleMenuStatus = () => {
   setMenuStatus(!menuStatus)
 }
@@ -16,7 +23,9 @@ const toggleDropdownStatus = () => {
 }
 
   return (
-    <navbar className='navbar' >
+
+    <section className='navbar-section' >
+    <nav className='navbar' >
        <span className='navbar-logo'>
         <MdHome size="2em" color='blue' />
          <h3>Real Estate</h3>
@@ -25,22 +34,29 @@ const toggleDropdownStatus = () => {
          
        <span>
         <Link to="/" > Home  </Link>
-        <Link  onMouseOver={ toggleDropdownStatus }  to="/" > For Sale 
-            <ul style={{ visibility : dropdownStatus ? 'hidden' : 'visible' }}  className='navbar-dropdown'>
-              <Link to= "/" > Houses For Sale  </Link>  <br />
-              <Link to= "/" > Apartments For Sale  </Link> <br />
-              <Link to= "/"  > Land For Sale  </Link>
-            </ul>
-         </Link>
+        <Link  onMouseOver={ toggleDropdownStatus }  to="/" > For Sale    </Link>
          <Link to = "/" >  For Rent  </Link>
         <Link to="/Agent" > Agent  </Link>
-        
+        <button> <Link to="/AddProperty"> Add Listing </Link>  </button>
        </span>
 
        <div className='navbar-buttons' >
-         <button> <Link to="/Login"> Login  </Link>  </button>
-         <button> <Link to="/Signup"> Signup  </Link> </button>
-         <button> <Link to="/ContactUs"> Contact Us </Link>  </button>
+        
+
+         { user && (
+           <div className='user-logged' >
+              <span> <h3>{user.email}</h3> </span>
+              <button onClick={handleClick} > logout </button>   
+            </div> )
+         }
+         {
+           !user && ( <div className='user-not-logged' >
+               <button> <Link to="/Login"> Login  </Link>  </button>
+               <button> <Link to="/Signup"> Signup  </Link> </button>
+           </div> )
+         }
+         
+         
        </div>
           
        </ul>
@@ -51,7 +67,8 @@ const toggleDropdownStatus = () => {
         <div></div>
        </div>
       
-    </navbar>
+    </nav>
+    </section>
   )
 }
 

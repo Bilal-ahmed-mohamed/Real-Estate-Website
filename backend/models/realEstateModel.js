@@ -17,7 +17,23 @@ const realEstateSchema = new Schema({
         type:String,
         required:true
     },
-    units:{
+    type:{
+        type:String,
+        required:true
+    },
+    purpose:{
+        type:String,
+        required:true
+    },
+    bedrooms:{
+        type:String,
+        required:true
+    },
+    features:{
+        type:String,
+        required:true
+    },
+    amenities:{
         type:String,
         required:true
     },
@@ -25,7 +41,7 @@ const realEstateSchema = new Schema({
         type:String,
         required:true
     },
-    type:{
+    units:{
         type:String,
         required:true
     },

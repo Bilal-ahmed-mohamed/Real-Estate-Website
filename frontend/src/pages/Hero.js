@@ -29,7 +29,7 @@ const Hero = () => {
                 <input type="text" name="" id="" placeholder='KES' />
             </span>
             <span className='hero-search-area-addBtn'>
-                <button>Add</button>
+                <button>Search</button>
             </span>
            </div>
 

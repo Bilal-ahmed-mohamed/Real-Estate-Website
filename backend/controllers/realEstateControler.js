@@ -2,6 +2,8 @@ const RealEstate = require('../models/realEstateModel')
 const mongoose = require('mongoose');
 const multer = require('multer');
 const path = require('path');
+const { type } = require('os');
+const { features } = require('process');
 
 
 // get all realestates
@@ -11,8 +13,7 @@ const getAllRealEstate = async (req,res) => {
 }
 
 
-// get a single workout 
-
+// get a single realestate
 const getAsingleRealEstate = async (req,res) => {
 
     const {id} = req.params
@@ -30,61 +31,36 @@ const getAsingleRealEstate = async (req,res) => {
 }
 
 //   post a new real estate
-
 const postAnewRealEstate = async (req,res) => {
-    // const {title,price,location,units,overview,type} = req.body 
-    // const {img} = req.file.path
 
     let Info = {
         title : req.body.title,
         price : req.body.price,
         location : req.body.location,
-        units : req.body.units,
-        overview : req.body.overview,
         type : req.body.type,
+        purpose: req.body.purpose,
+        bedrooms : req.body.bedrooms,
+        features: req.body.features,
+        amenities: req.body.amenities,
+        overview : req.body.overview,
+        units : req.body.units,       
         img : req.file.path
     }
 
-    // let emptyFields = [];
-
-    // if (!title) {
-    //     emptyFields.push('title')
-    // }
-    // if (!price) {
-    //     emptyFields.push('price')
-    // }
-    // if (!location) {
-    //     emptyFields.push('location')
-    // }
-    // if (!units) {
-    //     emptyFields.push('units')
-    // } 
-    // if (!overview) {
-    //     emptyFields.push('overview')
-    // }
-    // if (!type) {
-    //     emptyFields.push('type')
-    // }
-    // if (!img) {
-    //     emptyFields.push('img')
-    // }
-
      // add a realestate to a db
-
      try {
         const postArealEstate = await RealEstate.create(Info)
-        res.status(400).json(postArealEstate)
+        res.status(201).json(postArealEstate)
      } catch (error) {
         res.status(400).json({error:error.message})
      }
 }
 
-// delete a workout 
-
+// delete a relaEstate
 const deleteArealEstate = async (req,res) => {
     const {id} = req.params
     if(!mongoose.Types.ObjectId.isValid(id)){
-        return res.status(404).json({error:'No such Workout'})
+        return res.status(404).json({error:'No such real Property'})
      }
 
     const deleteRealEstate = await RealEstate.findByIdAndDelete({_id:id})
@@ -95,13 +71,12 @@ const deleteArealEstate = async (req,res) => {
     res.status(200).json(deleteRealEstate)
 }
 
-// UPDATE a workout
-
+// UPDATE a realEsatte
 const updateArealEstate = async (req,res) => {
     const {id} = req.params
 
     if(!mongoose.Types.ObjectId.isValid(id)){
-        return res.status(404).json({error:'No such Workout'})
+        return res.status(404).json({error:'No such property'})
      }
 
     const update = await RealEstate.findByIdAndUpdate({_id:id} , {
@@ -109,7 +84,7 @@ const updateArealEstate = async (req,res) => {
     })
 
     if (!update) {
-        return  res.status(400).json({error: "no such workout"})
+        return  res.status(400).json({error: "no such property"})
     }
     res.status(200).json(update)
 
@@ -120,8 +95,6 @@ const updateArealEstate = async (req,res) => {
 
 
 // uploading image controller
-
-
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'Images')
@@ -130,7 +103,6 @@ const storage = multer.diskStorage({
         cb(null, Date.now() + path.extname(file.originalname))
     }
 })
-
 const upload = multer({
     
     storage: storage,
@@ -139,52 +111,41 @@ const upload = multer({
         const fileTypes = /jpeg|jpg|png|gif/
         const mimeType = fileTypes.test(file.mimetype)  
         const extname = fileTypes.test(path.extname(file.originalname))
+        console.log(req.file);
 
         if(mimeType && extname) {
             return cb(null, true)
         }
         cb('Give proper files formate to upload')
     }
+
+    
     
 
     
 }).single('img')
 
-// const storage = multer.diskStorage({
-//     destination : (req,file,cb) => {
-//         cb(null , "images")
-//     },
-//     filename: (req,file,cb) => {
-//         cb(null , file.originalname)
-//     }
-// })
-
 // const upload = multer({
-//     storage:storage,
-//     limits: {fileSize:'10000000'},
-//     fileFilter: (req,file,cb) => {
-        
+    
+//     storage: storage,
+//     limits: { fileSize: '1000000' },
+//     fileFilter: (req, file, cb) => {
 //         const fileTypes = /jpeg|jpg|png|gif/
 //         const mimeType = fileTypes.test(file.mimetype)  
 //         const extname = fileTypes.test(path.extname(file.originalname))
-
-//         if(mimeType && extname) {
-//             return cb(null, true)
-//         }
-//         cb('Give proper files formate to upload')
         
-//         const fileTypes = /jpeg|jpg|png|gif/ 
-       
+
 //         if(mimeType && extname) {
 //             return cb(null, true)
 //         }
-
 //         cb('Give proper files formate to upload')
 //     }
-
     
 
-//   }).single('img')
+    
+// }).single('img')
+
+
         
 
 
