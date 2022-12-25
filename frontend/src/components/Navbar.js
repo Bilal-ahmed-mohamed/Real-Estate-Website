@@ -25,24 +25,23 @@ const toggleDropdownStatus = () => {
   return (
 
     <section className='navbar-section' >
-    <nav className='navbar' >
+    <nav className='navbar'>
        <span className='navbar-logo'>
         <MdHome size="2em" color='blue' />
          <h3>Real Estate</h3>
        </span>
-       <ul className='navbar-links' style={{right: menuStatus ? '-100%' : "0" }}>
-         
+       <div className='navbar-mobile'  style={{right: menuStatus ? '-100%' : "0" }} >
+       <ul className='navbar-links' >
        <span>
         <Link to="/" > Home  </Link>
         <Link  onMouseOver={ toggleDropdownStatus }  to="/" > For Sale    </Link>
          <Link to = "/" >  For Rent  </Link>
         <Link to="/Agent" > Agent  </Link>
-        <button> <Link to="/AddProperty"> Add Listing </Link>  </button>
+        <Link to="/AddProperty"> Add Listing </Link>  
        </span>
+       </ul>
 
        <div className='navbar-buttons' >
-        
-
          { user && (
            <div className='user-logged' >
               <span> <h3>{user.email}</h3> </span>
@@ -50,17 +49,14 @@ const toggleDropdownStatus = () => {
             </div> )
          }
          {
-           !user && ( <div className='user-not-logged' >
+           !user && ( <div className='user-logged' >
                <button> <Link to="/Login"> Login  </Link>  </button>
                <button> <Link to="/Signup"> Signup  </Link> </button>
            </div> )
          }
-         
-         
+       </div>
        </div>
           
-       </ul>
-
        <div onClick={toggleMenuStatus} className='navbar-burger'>
         <div style={{transForm: menuStatus ? 'rotate(45deg)' : 'rotate(0)'}} ></div>
         <div></div>

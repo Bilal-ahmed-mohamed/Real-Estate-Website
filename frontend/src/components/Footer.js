@@ -7,6 +7,7 @@ const Footer = () => {
   return (
 
     <footer className='footer'>
+      <span className='footer-span' >
         <div className='footer-half1'>
 
             <span className='footer-half1-section1'>
@@ -24,7 +25,7 @@ const Footer = () => {
             <Link to="/Sales" > Sales  </Link>
             </span>
             <span className='footer-half2-section2'>
-                <p>Follow Us</p>
+                <p>Follow Us On</p>
                   <p> <MdFacebook/> </p>
                   <p> <BsTwitter/> </p>
                   <p> <FaInstagram/> </p>
@@ -33,6 +34,7 @@ const Footer = () => {
                   
             </span>
         </div>
+        </span>
     </footer>
   )
 }
