@@ -31,7 +31,7 @@ const [type , setType] = useState('');
 
 
   return (
-    <div>
+    
 
       <div className='indivualPage' >
         
@@ -86,7 +86,7 @@ const [type , setType] = useState('');
          
       </div>
       
-    </div>
+    
   )
 }
 

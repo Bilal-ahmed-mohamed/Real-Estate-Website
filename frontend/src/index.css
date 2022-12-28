@@ -1,17 +1,3 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
- */
 
 *{
   margin: 0;
@@ -25,10 +11,7 @@ input .error {
   width: 100%;
   height: auto;
 }
-body{
-  height: auto;
-  background: rgb(238, 238, 238);
-}
+
 :root{
   --blue:#242F9B;
   --lightblue:#B2C8DF;
@@ -36,7 +19,7 @@ body{
 }
 /* input{
   width: 250px;
-  height: 45px;
+  height: 45px;`
   border-radius: 5px;
   outline: none;
   border:  2px solid var(--lightblue);
@@ -133,7 +116,7 @@ button a{
   width: 100%;
   height: 100px;
   display: flex;
-  background: var(--lightgrey);
+  background: var(--lightblue) ;
   margin-top: 120px;
 }
 .footer-span{
@@ -213,27 +196,27 @@ button a{
   background: white;
   margin: auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between ;
   margin-top: 20px;
   flex-wrap: wrap;
-  
 }
 
 .card-section{
-  width: 250px;
-  height: 300px;
+  width: 300px;
+  height: 350px;
   border: 1px solid rgb(5, 165, 240);
   border-radius: 5px;
-  margin: 10px;
+  margin-bottom: 20px;
 }
+
 .card-img{
   width: 100%;
-  height: 130px;
-  
+  height: 170px;  
 }
 .card-img img{
     width: 100%;
-    height: 130px;
+    height: 170px;
+    object-fit: fill;
 }
 .card-details{
   width: 100%;
@@ -241,6 +224,12 @@ button a{
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
+}
+.card-details h4{
+  margin-left: 20px;
+}
+.card-details p {
+  margin-left: 20px;
 }
 .card-details-price{
   color: red;
@@ -288,6 +277,12 @@ button a{
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
+}
+
+.form-div2-two select{
+  width: 350px;
+  height: 30px;
+  border-radius: 10px;
 }
 
 .form-div1 input{
@@ -468,21 +463,25 @@ button a{
   width: 350px;
   height: 40px;
 }
-/* indivualPage styling  */
+.form-button button:hover{
+  background: var(--lightblue);
+}
 
+/* indivualPage styling  */
 .indivualPage{
   width: 100%;
-  height: 1000px;
+  height: 800px;
+  background: goldenrod;
+  
 
 }
 .indivualpage-images-display-section{
   width: 100%;
   height: 300px;
-  background: navy;
 }
 .indivualpage-about-area{
   width: 100%;
-  height: 700px;
+  height: 500px;
   display: flex;
 }
 .indivualpage-abt-property{
@@ -584,6 +583,7 @@ button a{
   display: flex;
   justify-content: center;
   align-items: center;
+  background: var(--lightgrey) ;
 }
 .signup-form{
   display: flex;
@@ -675,7 +675,8 @@ button a{
   align-items: center;
   margin:auto ;
   width: 82%;
-  height: 400px;
+  height: 500px;
+  background: var(--lightgrey);
 
 }
 .login-form{
@@ -760,7 +761,7 @@ button a{
      position: absolute;
      right: 0;
      top: 48px;
-     background: powderblue;
+     background: var(--lightblue);
      width: 70%;
      height: 300px;  
      transition: 1.0s ease-in;
@@ -907,6 +908,12 @@ button a{
     width: 100%;
     height: auto;
   }
+  .form-card{
+    height: 800px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+  }
   .form-div1{
     width: 100%;
     height: 100px;
@@ -928,6 +935,13 @@ button a{
     display: flex;
     flex-direction: column;
   }
+  .form-div2-two select{
+    width: 95%;
+    height: 30px;
+    border-radius: 10px;
+    outline: none;
+  }
+
   .form-div2 span{
     width: 95%;
   }
@@ -941,6 +955,18 @@ button a{
     height: 100px;
     display: flex;
     flex-direction: column;
+  }
+  .form-div3-one select {
+    width: 95%;
+    height: 30px;
+    border-radius: 10px;
+    outline: none;
+  }
+  .form-div3-two select {
+    width: 95%;
+    height: 30px;
+    border-radius: 10px;
+    outline: none; 
   }
   .form-div3 span{
     width: 95%;
@@ -964,6 +990,43 @@ button a{
     border-radius: 10px;
     outline: none;
   }
+  .form-div6{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+  }
+  .form-div6-one{
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+  .form-div6-one label{
+    width: 95%;
+    margin: auto;
+  }
+  .form-div6-one input{
+    width: 95%;
+    margin: auto;
+    outline: none;
+  } 
+   .form-div6-two{
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+  .form-div6-two label{
+    width: 95%;
+    margin: auto;
+  }
+  .form-div6-two input{
+    width: 95%;
+    margin: auto;
+    outline: none;
+  } 
+  .form-div5 span input {
+    width: 300px;
+  }
   /* styles for signup page */
   .signup{
     width: 100%;
@@ -976,6 +1039,7 @@ button a{
   }
   .login-form{
     width: 100%;
+    margin-top: 100px;
   }
   
 }

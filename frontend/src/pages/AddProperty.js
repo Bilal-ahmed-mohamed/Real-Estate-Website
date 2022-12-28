@@ -112,7 +112,7 @@ const AddProperty = () => {
                         // className={emptyFields.includes('location') ? 'error' : '' }
                      />
                 </span>
-                <span className='form-div1-two' >
+                <span className='form-div2-two' >
                 <label htmlFor="">Select The Type Of The Property</label>
                 <select  name="" value={type} id=""  onChange={(e) => { setType(e.target.value) }}  >
                   <option value="Select....">Select....</option>

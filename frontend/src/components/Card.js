@@ -19,7 +19,7 @@ const Card = () => {
 
       if (response.ok) {
         dispatch({type:'SET_PROPERTY' , payload:json})
-      }
+      }  
     }
 
     fetchingProperty()
@@ -35,11 +35,11 @@ const Card = () => {
       {
         property && property.map((fetchData) => (
 
-          <Link to={`/IndivualPropery/${fetchData._id}`} className='card-section' key={fetchData._id}>
+          <div className='card-section' key={fetchData._id}>
 
-            <div className='card-img' >
+            <Link to={`/IndivualPropery/${fetchData._id}`}  className='card-img' >
                <img src={`http://localhost:4000/${fetchData.img}`} alt="myimage" />
-           </div> 
+           </Link> 
 
 
           <div className='card-details'>
@@ -48,7 +48,7 @@ const Card = () => {
              <p>{fetchData.location}</p>
               <p>{fetchData.overview}</p>
           </div>
-         </Link>
+         </div>
           
           
           
