@@ -163,14 +163,21 @@ const AddProperty = () => {
             <div className='form-div4' >
             <span className='form-div4-one'>
             <label htmlFor="">Enter The Features Of The Property</label>
-                <input 
+                {/* <input 
                     onChange={(e) => {
                     setFeatures(e.target.value)
                     }}
                     type="text"
                     value={features}
                     // className={emptyFields.includes('features') ? 'error' : '' }
-                  />
+                  /> */}
+                  <textarea
+                  onChange={(e) => {
+                    setFeatures(e.target.value)
+                    }}
+                    type="text"
+                    value={features}
+                     rows="4" cols="50"></textarea>
                 </span>
                 <span className='form-div4-two'>
                 <label htmlFor="">Enter The Amenities Of The Property</label>

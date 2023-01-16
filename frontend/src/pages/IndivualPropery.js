@@ -4,13 +4,16 @@ import axios from 'axios';
 
 const IndivualPropery = () => {
 
-  const {id} = useParams();
+const {id} = useParams();
 const[title, setTitle] = useState('')
 const [price , setPrice] = useState('');
 const [location , setLocation] = useState('');
 const [units , setUnits] = useState('');
 const [overview , setOverview] = useState('');
 const [type , setType] = useState('');
+const [img, setImg] = useState('');
+const [features , setFeatures] = useState('');
+const [purpose , setPurpose] = useState('');
  
 
   // const {data , isLoading , error} = UseFetch(`http://localhost:4000/api/realEstate/${id}/`)
@@ -22,6 +25,9 @@ const [type , setType] = useState('');
     setLocation(respon.data.location)
     setUnits(respon.data.units)
     setOverview(respon.data.overview)
+    setFeatures(respon.data.features)
+    setImg(respon.data.img)
+    setPurpose(respon.data.purpose)
     console.log(respon);
   }
 
@@ -33,24 +39,23 @@ const [type , setType] = useState('');
   return (
     
 
-      <div className='indivualPage' >
+      <div className='indivualPage'>
         
-      <main className='indivualpage-images-display-section' >
-           <h1>slider area</h1>
+      <main className='indivualpage-images-display-section'>
+      <img src={`http://localhost:4000/${img}`} alt="imageoftheproperty"/>
       </main>
 
       <section className='indivualpage-about-area' >
-         <span className='indivualpage-abt-property' >
-            <div className='details-of-the-property'>
-              <h1>{title}</h1>
-              <h2>{location}</h2>
+         <div className='indivualpage-abt-property' >
+            <span className='details-of-the-property'>            
+              <h1>{title} in {location} </h1>
+              <p>{units} Units </p>
                <h2> KSH {price}  </h2>
-               <h1>{units}</h1>
-            </div>
-            <div className='overview-of-the-property' >
-               <p>{overview}</p>
-            </div>
-         </span>
+               <p>{purpose}</p>
+               <p>{features}</p>
+               <p>{overview}</p>               
+            </span>
+         </div>
 
          <span className='indivualpage-agent-contact-area' >
             

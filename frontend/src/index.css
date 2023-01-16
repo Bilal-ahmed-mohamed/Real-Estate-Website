@@ -182,7 +182,16 @@ button a{
   align-items: center;
   opacity: 0.9;
 }
+
 .hero-search-area-category select{
+  width: 200px;
+  height: 35px;
+}
+.hero-search-area-search input{
+  width: 200px;
+  height: 35px;
+}
+.hero-search-area-price input{
   width: 200px;
   height: 35px;
 }
@@ -247,13 +256,12 @@ button a{
   background: white;
   border-radius: 5px;
   max-width: 1100px;
-  height: 450px;
+  height: 550px;
   margin: auto;
-  /* margin-top: 70px;
-  margin-bottom: 30px; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  border: 1px solid red;
 }
 .form-div1{
   width: 75%;
@@ -378,7 +386,7 @@ button a{
 }
 .form-div4{
   width: 75%;
-  height: 50px;
+  height: 100px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -386,11 +394,16 @@ button a{
 }
 .form-div4-one{
   width: 50%;
-  height: 80px;
+  height: 100px;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
 }
+.form-div4-one textarea{
+  width: 350px;
+  border-radius: 10px;
+}
+
 .form-div4-two{
   width: 50%;
   height: 80px;
@@ -470,19 +483,27 @@ button a{
 /* indivualPage styling  */
 .indivualPage{
   width: 100%;
-  height: 800px;
-  background: goldenrod;
-  
-
+  height: auto;
+  border: 2px solid yellow;
+  background: var(--lightgrey);
 }
 .indivualpage-images-display-section{
-  width: 100%;
-  height: 300px;
+  width: 82%;
+  height: 500px;
+  margin: auto;
 }
-.indivualpage-about-area{
+.indivualpage-images-display-section img{
   width: 100%;
   height: 500px;
+  margin-top: 20px;
+  object-fit: fill;
+}
+.indivualpage-about-area{
+  width: 82%;
+  height: 500px;
   display: flex;
+  margin: auto;
+  margin-top: 20px;
 }
 .indivualpage-abt-property{
   width: 65%;
@@ -490,10 +511,10 @@ button a{
 }
 .details-of-the-property{
   width: 100%;
-  height: 250px;
+  height: 500px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-around ;
 }
 .indivualpage-agent-contact-area{
   width: 35%;
@@ -501,12 +522,15 @@ button a{
   border: 1px solid var(--lightblue);
 }
 .property-banner{
-  width: 100%;
+  width: 100%; 
   height: 100px;
   border: 1px solid var(--lightgrey);
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+}
+.property-banner h1{
+  text-align: center;
 }
 
 .form-to-contact-agent{
@@ -526,6 +550,10 @@ button a{
 }
 .full-name-details input , label{
   width: 75%;
+  height: 30px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
 }
 .phone-number-details{
   width: 100%;
@@ -537,6 +565,10 @@ button a{
 }
 .phone-number-details input , label{
   width: 75%;
+  height: 30px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
 }
 .email-details{
   width: 100%;
@@ -548,6 +580,10 @@ button a{
 }
  .email-details input , label{
   width: 75%;
+  height: 30px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
 }
 .message-details{
   width: 100%;
@@ -557,13 +593,14 @@ button a{
   align-items: center;
   justify-content: space-evenly;
 }
-.message-details input , textarea{
-  width: 75%;
-}
 .message-details textarea{
-  width: 350px;
-  height: 50px;
+  width: 290px;
+  height: 100px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
 }
+
 .contact-btn{
   width: 100%;
   height: 50px;
@@ -885,14 +922,15 @@ button a{
   .card-section{
     margin: auto;
     width: 92%;
+    margin-bottom: 20px;
   }
   .card-img{
     width: 100%;
-    height: 130px;
+    height: 150px;
   }
   .card-img img{
     width: 100%;
-    height: 130px;
+    height: 150px;
     object-fit: cover;
   }
   .form-page{
@@ -1041,5 +1079,42 @@ button a{
     width: 100%;
     margin-top: 100px;
   }
+  /* indiviual page */
+  .indivualPage{
+     width: 100%;
+     height: auto;
+  }
+  .indivualpage-images-display-section{
+    width: 100%;
+    height: 500px;
+  }
+  .indivualpage-about-area{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 20px;
+  }
+  .indivualpage-abt-property{
+    width: 95%;
+    margin: auto;
+  }
+  .indivualpage-agent-contact-area{
+    width: 100%;
+  }
+  .property-banner{
+    width: 100%;
+    height: 100px;
+  }
+  .property-banner h1{
+    text-align: center;
+    margin-left: 30px;
+  }
+  .message-details textarea{
+    width: 370px;
+    height: 100px;
+  }
+
   
 }
