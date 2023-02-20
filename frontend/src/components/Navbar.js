@@ -36,7 +36,6 @@ const toggleDropdownStatus = () => {
         <Link to="/" > Home  </Link>
         <Link  onMouseOver={ toggleDropdownStatus }  to="/" > For Sale    </Link>
          <Link to = "/" >  For Rent  </Link>
-        <Link to="/Agent" > Agent  </Link>
         <Link to="/AddProperty"> Add Listing </Link>  
        </span>
        </ul>

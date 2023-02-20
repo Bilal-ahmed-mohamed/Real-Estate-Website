@@ -10,6 +10,7 @@ input .error {
 .App{
   width: 100%;
   height: auto;
+  background: var(--lightgrey);
 }
 
 :root{
@@ -191,7 +192,7 @@ button a{
   width: 200px;
   height: 35px;
 }
-.hero-search-area-price input{
+.hero-search-area-price select{
   width: 200px;
   height: 35px;
 }
