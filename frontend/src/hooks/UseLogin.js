@@ -12,7 +12,7 @@ const login = async (email,password) => {
     setIsLoading(true)
     setError(null)
 
-    const response = await fetch( 'http://localhost:4000/api/user/Login' , {
+    const response = await fetch( 'https://real-estate-api-ukjv.onrender.com/api/user/Login' , {
         method : 'POST',
         headers : {'Content-Type' : 'application/json'},
         body : JSON.stringify({email,password})

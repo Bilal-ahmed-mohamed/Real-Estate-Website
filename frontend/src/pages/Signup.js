@@ -16,7 +16,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
 
     e.preventDefault();
-    axios.post('http://localhost:4000/api/user/Signup' , {
+    axios.post('https://real-estate-api-ukjv.onrender.com/api/user/Signup' , {
       userName : Username,
       email:email,
       password:password

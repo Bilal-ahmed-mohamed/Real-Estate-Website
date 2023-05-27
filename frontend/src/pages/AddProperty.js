@@ -37,7 +37,7 @@ const AddProperty = () => {
         formdata.append("img" , img)
 
 
-       const response = await fetch('http://localhost:4000/api/realEstate' , {
+       const response = await fetch('https://real-estate-api-ukjv.onrender.com/api/realEstate' , {
             method: 'POST',
             body: formdata
         })

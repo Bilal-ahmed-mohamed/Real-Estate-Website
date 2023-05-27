@@ -19,7 +19,7 @@ const [purpose , setPurpose] = useState('');
   // const {data , isLoading , error} = UseFetch(`http://localhost:4000/api/realEstate/${id}/`)
 
   const getSingleProperty = async () => {
-    const respon  = await axios.get(`http://localhost:4000/api/realEstate/${id}`)
+    const respon  = await axios.get(`https://real-estate-api-ukjv.onrender.com/api/realEstate/${id}`)
     setTitle(respon.data.title)
     setPrice(respon.data.price)
     setLocation(respon.data.location)
@@ -42,7 +42,7 @@ const [purpose , setPurpose] = useState('');
       <div className='indivualPage'>
         
       <main className='indivualpage-images-display-section'>
-      <img src={`http://localhost:4000/${img}`} alt="imageoftheproperty"/>
+      <img src={`https://real-estate-api-ukjv.onrender.com/${img}`} alt="imageoftheproperty"/>
       </main>
 
       <section className='indivualpage-about-area' >
