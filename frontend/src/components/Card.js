@@ -38,7 +38,7 @@ const Card = () => {
           <div className='card-section' key={fetchData._id}>
 
             <Link to={`/IndivualPropery/${fetchData._id}`}  className='card-img' >
-               <img src={`http://localhost:4000/${fetchData.img}`} alt="myimage" />
+               <img src={`https://real-estate-api-ukjv.onrender.com/${fetchData.img}`} alt="myimage" />
            </Link> 
 
 
